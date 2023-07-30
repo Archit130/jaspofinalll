@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaspo Worldwide</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/images/jaspo_logo-removebg-preview-2.png"
+    />
+    <!--css-->
+    <link href="/css/index.css" rel="stylesheet" />
+    <!--boostrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!--swiper-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .img-1 {
+        max-width: 100%;
+        height: 2em;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .navbar.scrolled-up {
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out;
+      }
+      .owl-nav {
+        font-size: 2em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid bg-light" style="min-height: 0.5vh">
+      <div class="container mx-auto">
+        <div class="row">
+          <div
+            class="col-sm-2 mt-2 mx-auto text-center"
+            style="text-decoration: none; font-size: 1.5em; color: rgb(0, 0, 0)"
+          >
+            <a
+              href=""
+              style="text-decoration: none; font-size: 1em; color: rgb(0, 0, 0)"
+            >
+              <ion-icon
+                name="logo-instagram"
+                style="
+                  color: rgb(0, 0, 0);
+                  text-decoration: none;
+                  font-size: 1em;
+                "
+              ></ion-icon>
+            </a>
+            <a href="">
+              <ion-icon
+                name="logo-facebook"
+                style="
+                  color: rgb(0, 0, 0);
+                  text-decoration: none;
+                  font-size: 1em;
+                "
+              ></ion-icon>
+            </a>
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-6 text-center mt-2">
+            <p
+              style="
+                font-size: 1em;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: rgb(0, 0, 0);
+              "
+            >
+              <i>JUST ADD SPORTS</i>
+            </p>
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-2 text-center mx-auto">
+            <span
+              style="display: flex; flex-direction: row; text-align: center"
+              class="mx-auto text-center"
+            >
+              <div
+                class="container-fluid mx-auto text-center"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  justify-items: center;
+                "
+              >
+                <i
+                  class="fa-solid fa-envelope mt-2 mx-2 text-center"
+                  style="color: #000000"
+                ></i>
+
+                <p
+                  style="
+                    font-size: 1.2em;
+                    font-weight: 400;
+                    margin-top: 0.1em;
+                    color: rgb(0, 0, 0);
+                  "
+                >
+                  Jaspo@gmail.com
+                </p>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg"
+      style="background-color: white"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="/images/jaspo_logo-removebg-preview-2.png"
+            class="img-fuid"
+            style="width: 100%; height: 3em"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/html/view.html">SKATEBOARD</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ROLLER SKATES
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">QUAD</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">INLINE</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">KICK SCOOTER</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">SAFETY EQUIPMENTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">CRICKET</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OTHER
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">BADMINTON</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">BASKETBALL</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">FOOTBALL</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">FITNESS</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper text-center mx-auto">
+        <div class="swiper-slide bg-light">
+          Elevate your game with Jaspo, where passion meets performance in
+          the<br />
+          world of sports, ensuring every athlete's dream becomes a reality
+        </div>
+        <div class="swiper-slide bg-light">
+          Unleash the champion within as you gear up with Jaspo, the ultimate
+          <br />
+          sports companion that empowers you to conquer every challenge on the
+          field.
+        </div>
+        <div class="swiper-slide bg-light">
+          Experience the thrill of victory with Jaspo, the go-to brand that
+          <br />
+          epitomizes innovation, quality, and excellence in the sports industry.
+        </div>
+        <div class="swiper-slide bg-light">
+          From amateurs to pros, Jaspo remains the game-changer of the sports
+          <br />
+          industry, delivering cutting-edge equipment and fostering a community
+          of winners.
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center mx-auto">
+      <a href="#" style="cursor: pointer; display: block">
+        <img
+          src="/images/Untitled design (3).png"
+          class="img-fluid"
+          style="max-height: 100vh; width: 100%"
+        />
+      </a>
+    </div>
+
+    <div class="container mt-5 text-center mx-auto">
+      <p style="font-size: 2em; font-weight: 600">JASPO WORLDWIDE<br /></p>
+      <p>
+        <span style="font-size: 1.8em; font-weight: 200">
+          Just Add Sports
+        </span>
+      </p>
+      <p>
+        <span style="font-size: 1.8em; font-weight: 200">
+          Your Ultimate Destination for Sports Enthusiasts, Where Passion and
+          Performance Unite!
+        </span>
+      </p>
+    </div>
+
+    <div class="container">
+      <hr style="border: 1px solid grey" />
+    </div>
+
+    <div class="container">
+      <p style="font-size: 2em; font-weight: 600">
+        SKATEBOARD
+        <img
+          src="/images/200w-unscreen.gif"
+          class="img-fluid mx-3"
+          style="width: 3em; height: 3em"
+        />
+      </p>
+      <p style="font-size: 1.8em; font-weight: 200; margin-top: -0.6em">
+        Unleash Your World on Wheels
+      </p>
+    </div>
+
+    <div class="container-fluid mx-auto">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/izzy-park-ETqZh_Oe5iE-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/izzy-park-ETqZh_Oe5iE-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/izzy-park-ETqZh_Oe5iE-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/izzy-park-ETqZh_Oe5iE-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/izzy-park-ETqZh_Oe5iE-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/izzy-park-ETqZh_Oe5iE-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <hr style="border: 1px solid grey" />
+    </div>
+
+    <div class="container">
+      <p style="font-size: 2em; font-weight: 600; text-transform: uppercase">
+        Exclusive products
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6" style="position: relative">
+          <p style="font-size: 1.8em; font-weight: 200">CRICKET</p>
+          <a href="#">
+            <img
+              src="/images/yogendra-singh-4SuSK9Byxuc-unsplash.jpg"
+              style="cursor: pointer"
+              class="img-fluid mb-4"
+            />
+          </a>
+          <button
+            class="button"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            "
+          >
+            BUY NOW
+          </button>
+        </div>
+
+        <div class="col-sm-6" style="position: relative">
+          <p style="font-size: 1.8em; font-weight: 200">SAFETY EQUIPMENTS</p>
+          <a href="#">
+            <img
+              src="/images/gayatri-malhotra-qJaIUrfUwU8-unsplash.jpg"
+              style="cursor: pointer"
+              class="img-fluid"
+            />
+          </a>
+          <button
+            class="button"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            "
+          >
+            BUY NOW
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <hr style="border: 1px solid grey" />
+    </div>
+
+    <div class="container">
+      <p style="font-size: 2em; font-weight: 600">JUST ARRIVED</p>
+      <p style="font-size: 1.8em; font-weight: 200; margin-top: -0.6em">
+        KICK SCOOTER
+      </p>
+    </div>
+
+    <div class="container" style="display: block; position: relative">
+      <img
+        src="/images/kelly-sikkema-N4tDi48Ct-A-unsplash.jpg"
+        class="img-fluid mb-4"
+        style="max-height: 100vh; width: 100%; position: relative"
+      />
+      <a href="#">
+        <button
+          class="button"
+          type="submit"
+          style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          "
+        >
+          SHOP NOW
+        </button>
+      </a>
+    </div>
+
+    <div class="container">
+      <hr style="border: 1px solid grey" />
+    </div>
+
+    <div class="container text-center mx-auto">
+      <p style="font-size: 3em; font-weight: 1000; text-transform: uppercase">
+        Unite, Compete, <br />Conquer: <br />
+        Join Jaspo Worldwide Sports!
+      </p>
+      <p style="font-size: 1.8em; font-weight: 200; margin-top: -0.6em">
+        JUST ADD SPORTS
+      </p>
+      <a href="#">
+        <button class="button" type="button">SHOP NOW</button>
+      </a>
+    </div>
+
+    <div class="container">
+      <hr style="border: 1px solid grey" />
+    </div>
+
+    <div class="container">
+      <p style="font-size: 2em; font-weight: 600">ROLLER SKATES</p>
+      <p style="font-size: 1.8em; font-weight: 200; margin-top: -0.6em">
+        WHY WALK, WHEN YOU CAN ROLL!
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6" style="position: relative">
+          <a href="#">
+            <img
+              src="/images/anthony-a-L3JGQ7S5I0U-unsplash.jpg"
+              style="cursor: pointer"
+              class="img-fluid mb-4"
+            />
+          </a>
+          <button
+            class="button"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            "
+          >
+            BUY NOW
+          </button>
+        </div>
+
+        <div class="col-sm-6" style="position: relative">
+          <a href="#">
+            <img
+              src="/images/quinton-coetzee-uUR0tIZ6U9M-unsplash.jpg"
+              style="cursor: pointer"
+              class="img-fluid"
+            />
+          </a>
+          <button
+            class="button"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            "
+          >
+            BUY NOW
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <hr style="border: 1px solid grey" />
+    </div>
+
+    <div class="container">
+      <p style="font-size: 2em; font-weight: 600">
+        ROLLER SKATES
+        <img
+          src="/images/roller-skate-görkori.gif"
+          class="img-fluid mx-3"
+          style="width: 3em; height: 3em"
+        />
+      </p>
+      <p style="font-size: 1.8em; font-weight: 200; margin-top: -0.6em">
+        Roll with Joy: Embrace the Freedom of Roller Skates!
+      </p>
+    </div>
+
+    <div class="container-fluid mx-auto">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <hr style="border: 1px solid grey" />
+    </div>
+
+    <div class="container">
+      <p style="font-size: 2em; font-weight: 600; text-transform: uppercase">
+        THE TRIO
+      </p>
+    </div>
+
+    <div class="container" style="position: relative">
+      <div class="row">
+        <div class="col-sm-4" style="position: relative">
+          <img
+            src="/images/xuanming-U5epRU6sY_A-unsplash.jpeg"
+            class="img-fluid mb-4"
+            alt="badminton"
+            style="max-height: 100vh"
+          />
+          <button
+            class="button"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            "
+          >
+            BUY NOW
+          </button>
+        </div>
+        <div class="col-sm-4" style="position: relative">
+          <img
+            src="/images/stephen-baker-QAX5Ylx-lKo-unsplash.jpeg"
+            class="img-fluid mb-4"
+            style="max-height: 100vh"
+            alt="basketball"
+          />
+          <button
+            class="button"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            "
+          >
+            BUY NOW
+          </button>
+        </div>
+        <div class="col-sm-4" style="position: relative">
+          <img
+            src="/images/sven-kucinic-Z0KjmjxUsKs-unsplash.jpeg"
+            class="img-fluid"
+            style="max-height: 100vh"
+            alt="FOOTBALL"
+          />
+          <button
+            class="button"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            "
+          >
+            BUY NOW
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer bg-black mt-5" style="padding: 1em 1em 1em">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 text-center" style="color: white">
+            <p class="footer-text">About</p>
+            <p>
+              At Jaspo, we are passionate about skateboarding and dedicated to
+              delivering exceptional products to riders of all ages and skill
+              levels.
+            </p>
+          </div>
+          <div class="col-sm-3 text-center" style="color: white">
+            <p class="footer-text">Quick Links</p>
+            <ul style="list-style: none">
+              <li>Home</li>
+              <li>About Us</li>
+              <li>Products</li>
+              <li>Contact us</li>
+            </ul>
+          </div>
+          <div
+            class="col-sm-3 text-center"
+            style="display: flex; flex-direction: column; color: white"
+          >
+            <p class="footer-text">Our Social</p>
+            <a href="#"
+              ><ion-icon name="logo-instagram" class="mb-2"></ion-icon
+            ></a>
+            <a href="#"
+              ><ion-icon name="logo-twitter" class="mb-2"></ion-icon
+            ></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </div>
+
+          <div class="col-sm-3 text-center">
+            <div class="container">
+              <p class="footer-text" style="color: white">Modes Of Payment</p>
+            </div>
+            <div class="container" style="display: flex; flex-direction: row">
+              <img
+                src="/images/mastercard.png"
+                class="img-1"
+                alt="mastercard"
+              />
+              <img src="/images/gpay.png" class="img-1" alt="gpay" />
+              <img src="/images/paypal.png" class="img-1" alt="paypal" />
+
+              <img src="/images/paytm.png" class="img-1" alt="paytm" />
+              <img src="/images/upi.png" class="img-1" alt="upi" />
+
+              <img src="/images/visa.png" class="img-1" alt="visa" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr style="border: 1px solid whitesmoke" />
+      </div>
+
+      <div class="container text-center mx-auto">
+        <div class="row justify-content-between">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-2">
+            <img
+              src="/images/4502000 (1).png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2">
+            <img
+              src="/images/4502000-2.png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2">
+            <img
+              src="/images/4502000.png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2">
+            <img
+              src="/images/45020003.png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr style="border: 1px solid whitesmoke" />
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p style="color: white">Contact Us Through:</p>
+            <span style="display: flex; flex-direction: row">
+              <ion-icon name="mail-outline" class="mx-2"></ion-icon>
+              <p style="color: lightgray">randommail@gmail.com</p>
+            </span>
+            <span style="display: flex; flex-direction: row">
+              <ion-icon name="logo-facebook" class="mx-2"></ion-icon>
+              <p style="color: lightgray">facebook page name</p>
+            </span>
+            <span style="display: flex; flex-direction: row">
+              <ion-icon name="logo-instagram" class="mx-2"></ion-icon>
+              <p style="color: lightgray">insta page book</p>
+            </span>
+          </div>
+          <div class="col-sm-6">
+            <p class="footer-text" style="color: white">Community</p>
+            <p style="color: lightgray">
+              Subscribe to our newsletter and be the first to get all inside
+              information on the latest drops and special offers.
+            </p>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <hr style="border: 1px solid whitesmoke" />
+      </div>
+
+      <div class="container text-center" style="color: white">
+        © JASPO WORLDWIDE 2023
+      </div>
+    </div>
+    <!--boostrap script-->
+    <script src="/js/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!--swiper-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!--owl-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 3,
+        center: true,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+    <script>
+      var swiper = new Swiper(".mySwiper-1", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

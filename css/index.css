@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+p{
+    font-size: 14px;
+}
+/* Set dropdown-menu to display none by default */
+.dropdown-menu {
+    display: none;
+  }
+  
+  /* Show dropdown-menu on hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .button{
+    background-color: black;
+    color: white;
+    padding: 10px 50px 10px;
+    border: none;
+  }
+  .button:hover{
+    background-color: white;
+    color: black;
+    padding: 10px 50px 10px;
+  }
+  ion-icon{
+    color: white;
+    font-size: 1.5em;
+  }
+  .footer-text{
+    text-align: center;
+    line-height: normal;
+    letter-spacing:.1rem;
+    font-size: 2em;
+  }
