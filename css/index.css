@@ -43,6 +43,7 @@ p{
   .nav-item .nav-link{
     text-decoration: none; /* Remove the default underline */
   position: relative;    /* Needed to position the pseudo-element */
+  font-weight: bold;
   }
   .nav-item .nav-link:hover{
     text-decoration: none; 
