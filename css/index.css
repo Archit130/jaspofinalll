@@ -40,3 +40,24 @@ p{
     letter-spacing:.1rem;
     font-size: 2em;
   }
+  .nav-item .nav-link{
+    text-decoration: none; /* Remove the default underline */
+  position: relative;    /* Needed to position the pseudo-element */
+  }
+  .nav-item .nav-link:hover{
+    text-decoration: none; 
+  }
+  .nav-item .nav-link::after{
+    content: '';                        /* Required for pseudo-elements */
+    position: absolute;                 /* Position the underline absolutely */
+    left: 0;                            /* Start the underline from the left */
+    bottom: -2px;                       /* Adjust the distance from the text */
+    width: 100%;                        /* Set the width of the underline */
+    height: 2px;                        /* Set the thickness of the underline */
+    background-color: #000;             /* Choose your desired underline color */
+    opacity: 0;                         /* Make the underline invisible by default */
+    transition: opacity 0.3s ease;   
+  }
+  .nav-item .nav-link:hover::after{
+    opacity: 1;
+  }
