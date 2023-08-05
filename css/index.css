@@ -24,6 +24,7 @@ p{
     padding: 10px 50px 10px;
     border: none;
     border-radius: 16px;
+    text-decoration: none;
   }
   .button:hover{
     background-color: white;
