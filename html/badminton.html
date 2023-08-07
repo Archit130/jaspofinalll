@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaspo Worldwide : BADMINTON</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/images/jaspo_logo-removebg-preview-2.png"
+    />
+    <!--css-->
+    <link href="/css/index.css" rel="stylesheet" />
+    <!--boostrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!--swiper-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .img-1 {
+        max-width: 100%;
+        height: 2em;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .navbar.scrolled-up {
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out;
+      }
+      .owl-nav {
+        font-size: 2em;
+        text-align: center;
+      }
+      .search {
+        position: relative;
+        width: 60px;
+        height: 40px;
+        background: transparent;
+        transition: 0.5s;
+        /* box-shadow: 2px 2px 10px rgb(0, 0, 0); */
+        display: flex;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .search.active {
+        width: 360px;
+      }
+      .search .icon {
+        position: absolute;
+        color: #000000;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 40px;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .search .input {
+        position: relative;
+        width: 300px;
+        height: 40px;
+        left: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-style: none;
+        text-decoration: underline;
+        background: lightgray;
+        border-radius: 16px;
+        padding: 0.5em 0.5em 0.5em;
+      }
+      .search .input input {
+        border: 1px solid black;
+        text-align: justify;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: rgb(239, 239, 239);
+        border-radius: 16px;
+        /* outline: rgb(0, 0, 0); */
+        font-size: 18px;
+      }
+      .clear {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        right: 15px;
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .clear::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 15px;
+        background: #0a0a0a;
+        transform: rotate(45deg);
+      }
+      .clear::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 15px;
+        background: #000000;
+        transform: rotate(315deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid bg-light" style="min-height: 0.5vh">
+      <div class="container mx-auto">
+        <div class="row">
+          <div
+            class="col-sm-2 mt-2 mx-auto text-center"
+            style="text-decoration: none; font-size: 1.5em; color: rgb(0, 0, 0)"
+          >
+            <a
+              href=""
+              style="text-decoration: none; font-size: 1em; color: rgb(0, 0, 0)"
+            >
+              <ion-icon
+                name="logo-instagram"
+                style="
+                  color: rgb(0, 0, 0);
+                  text-decoration: none;
+                  font-size: 1em;
+                "
+              ></ion-icon>
+            </a>
+            <a href="">
+              <ion-icon
+                name="logo-facebook"
+                style="
+                  color: rgb(0, 0, 0);
+                  text-decoration: none;
+                  font-size: 1em;
+                "
+              ></ion-icon>
+            </a>
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-6 text-center mt-2">
+            <p
+              style="
+                font-size: 1em;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: rgb(0, 0, 0);
+              "
+            >
+              <i>JUST ADD SPORTS</i>
+            </p>
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-2 text-center mx-auto">
+            <span
+              style="display: flex; flex-direction: row; text-align: center"
+              class="mx-auto text-center"
+            >
+              <div
+                class="container-fluid mx-auto text-center"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  justify-items: center;
+                "
+              >
+                <i
+                  class="fa-solid fa-envelope mt-2 mx-2 text-center"
+                  style="color: #000000"
+                ></i>
+
+                <p
+                  style="
+                    font-size: 1.2em;
+                    font-weight: 400;
+                    margin-top: 0.1em;
+                    color: rgb(0, 0, 0);
+                  "
+                >
+                  Jaspo@gmail.com
+                </p>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: white">
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">
+          <img
+            src="/images/jaspo_logo-removebg-preview-2.png"
+            class="img-fuid"
+            style="width: 100%; height: 3em"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/html/Skateboard.html"
+                >SKATEBOARD</a
+              >
+            </li>
+            <li class="nav-item dropdown mx-2" style="z-index: 10000">
+              <a
+                class="nav-link dropdown-toggle"
+                href="/html/Roller.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ROLLER SKATES
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/html/Roller.html">QUAD</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/html/Roller.html">INLINE</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/html/kickscooter.html"
+                >KICK SCOOTER</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/html/safety.html"
+                >SAFETY EQUIPMENTS</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/html/cricket.html">CRICKET</a>
+            </li>
+            <li class="nav-item dropdown" style="z-index: 10000">
+              <a
+                class="nav-link dropdown-toggle mx-2"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OTHER
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/html/badminton.html"
+                    >BADMINTON</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/html/basketball.html"
+                    >BASKETBALL</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/html/football.html"
+                    >FOOTBALL</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/html/fitness.html">FITNESS</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <form>
+        <div class="search" style="color: #000000">
+          <div class="icon">
+            <ion-icon name="search-outline" style="color: black"></ion-icon>
+          </div>
+          <div class="input">
+            <input type="text" placeholder="Search" id="mysearch" />
+            <span
+              class="clear"
+              onclick="document.getElementById('mysearch').value ='' "
+            >
+            </span>
+          </div>
+        </div>
+      </form>
+      <ion-icon
+        name="heart-outline"
+        class="mx-2"
+        style="color: black; font-size: 1.6em"
+        title="favourite"
+      ></ion-icon>
+      <ion-icon
+        name="bag-outline"
+        class="mx-2"
+        style="color: black; font-size: 1.6em"
+        title="checkout"
+      ></ion-icon>
+    </nav>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper text-center mx-auto">
+        <div class="swiper-slide bg-light">
+          Elevate your game with Jaspo, where passion meets performance in
+          the<br />
+          world of sports, ensuring every athlete's dream becomes a reality
+        </div>
+        <div class="swiper-slide bg-light">
+          Unleash the champion within as you gear up with Jaspo, the ultimate
+          <br />
+          sports companion that empowers you to conquer every challenge on the
+          field.
+        </div>
+        <div class="swiper-slide bg-light">
+          Experience the thrill of victory with Jaspo, the go-to brand that
+          <br />
+          epitomizes innovation, quality, and excellence in the sports industry.
+        </div>
+        <div class="swiper-slide bg-light">
+          From amateurs to pros, Jaspo remains the game-changer of the sports
+          <br />
+          industry, delivering cutting-edge equipment and fostering a community
+          of winners.
+        </div>
+      </div>
+    </div>
+    <nav
+      class="navbar navbar-expand-lg sticky-top"
+      style="
+        background-color: white;
+        box-shadow: 2px 2px 2px rgb(208, 208, 208);
+        padding: 1em 1em 1em;
+      "
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">BADMINTON</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown mx-2">
+              <a
+                class="nav-link dropdown-toggle"
+                href=""
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ADJUSTABLE
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/html/Roller.html">SENIOR</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/html/Roller.html">JUNIOR</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a
+                class="nav-link dropdown-toggle"
+                href=""
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                SHOE SKATES
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/html/Roller.html">PRO-30</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/html/Roller.html"
+                    >PRO HYPER</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ACCESSORIES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">QUAD SKATE COMBOS</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <img src="/images/badminton0.jpeg" class="img-fluid" alt="cricket" />
+    </div>
+
+    <div class="container mt-4 text-center mx-auto">
+      <p style="font-size: 2em; font-weight: 600">Experience Badminton:</p>
+      <p style="font-size: 1.8em; font-weight: 200; margin-top: -0.6em">
+        Smash, Serve, Score!
+      </p>
+      <button class="button mt-2">SHOP NOW</button>
+    </div>
+
+    <span></span>
+
+    <div class="container mt-3">
+      <p style="font-weight: 600; font-size: 2em">SHOP WITH TREND</p>
+    </div>
+
+    <div class="container">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <span></span>
+
+    <div
+      class="container-fluid text-center"
+      style="display: block; position: relative"
+    >
+      <img
+        style="max-height: 100vh; position: relative"
+        src="/images/badminton1.jpeg"
+        class="img-fluid"
+        alt="BADMINTON ball jaspo Worldwide"
+      />
+      <button
+        class="button"
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        "
+      >
+        BUY NOW
+      </button>
+    </div>
+
+    <div class="container mt-4">
+      <p style="font-size: 2em; font-weight: 600; text-transform: uppercase">
+        Discover the Elegance of Badminton: Swing into Action!
+      </p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 mt-5">
+          <div class="box" style="position: relative">
+            <img
+              src="/images/badminton2.jpeg"
+              class="img-fluid"
+              alt="roller skates"
+            />
+            <button
+              class="button"
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              "
+            >
+              SHOP NOW
+            </button>
+          </div>
+          <div class="box" style="position: relative">
+            <img
+              src="/images/badminton4.jpeg"
+              class="img-fluid mt-3"
+              alt="roller skates"
+            />
+            <button
+              class="button"
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              "
+            >
+              SHOP NOW
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-6 mt-1" style="position: relative">
+          <img
+            src="/images/badminton5.jpeg"
+            class="img-fluid"
+            alt="rollerskates jaspo"
+          />
+          <button
+            class="button"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            "
+          >
+            SHOP NOW
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <span></span>
+
+    <div class="container mt-3">
+      <p style="font-size: 2em; font-family: 600">QUICKEST TO SELL</p>
+      <p style="font-size: 1.8em; font-weight: 200; margin-top: -0.6em">
+        BE THE FIRST ONE TO GRAB, BEFORE THEY ROLL OUT
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card mx-auto" style="width: 22rem">
+            <img
+              src="/images/quinton-coetzee-Mn9ZRsDAp_o-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="button">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <span></span>
+
+    <div class="footer bg-black mt-5" style="padding: 1em 1em 1em">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 text-center" style="color: white">
+            <p class="footer-text">About</p>
+            <p>
+              At Jaspo, we are passionate about skateboarding and dedicated to
+              delivering exceptional products to riders of all ages and skill
+              levels.
+            </p>
+          </div>
+          <div class="col-sm-3 text-center" style="color: white">
+            <p class="footer-text">Quick Links</p>
+            <ul style="list-style: none">
+              <li>Home</li>
+              <li>About Us</li>
+              <li>Products</li>
+              <li>Contact us</li>
+            </ul>
+          </div>
+          <div
+            class="col-sm-3 text-center"
+            style="display: flex; flex-direction: column; color: white"
+          >
+            <p class="footer-text">Our Social</p>
+            <a href="#"
+              ><ion-icon name="logo-instagram" class="mb-2"></ion-icon
+            ></a>
+            <a href="#"
+              ><ion-icon name="logo-twitter" class="mb-2"></ion-icon
+            ></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </div>
+
+          <div class="col-sm-3 text-center">
+            <div class="container">
+              <p class="footer-text" style="color: white">Modes Of Payment</p>
+            </div>
+            <div class="container" style="display: flex; flex-direction: row">
+              <img
+                src="/images/mastercard.png"
+                class="img-1"
+                alt="mastercard"
+              />
+              <img src="/images/gpay.png" class="img-1" alt="gpay" />
+              <img src="/images/paypal.png" class="img-1" alt="paypal" />
+
+              <img src="/images/paytm.png" class="img-1" alt="paytm" />
+              <img src="/images/upi.png" class="img-1" alt="upi" />
+
+              <img src="/images/visa.png" class="img-1" alt="visa" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr style="border: 1px solid whitesmoke" />
+      </div>
+
+      <div class="container text-center mx-auto">
+        <div class="row justify-content-between">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-2">
+            <img
+              src="/images/4502000 (1).png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2">
+            <img
+              src="/images/4502000-2.png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2">
+            <img
+              src="/images/4502000.png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2">
+            <img
+              src="/images/45020003.png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr style="border: 1px solid whitesmoke" />
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p style="color: white">Contact Us Through:</p>
+            <span style="display: flex; flex-direction: row">
+              <ion-icon name="mail-outline" class="mx-2"></ion-icon>
+              <p style="color: lightgray">randommail@gmail.com</p>
+            </span>
+            <span style="display: flex; flex-direction: row">
+              <ion-icon name="logo-facebook" class="mx-2"></ion-icon>
+              <p style="color: lightgray">facebook page name</p>
+            </span>
+            <span style="display: flex; flex-direction: row">
+              <ion-icon name="logo-instagram" class="mx-2"></ion-icon>
+              <p style="color: lightgray">insta page book</p>
+            </span>
+          </div>
+          <div class="col-sm-6">
+            <p class="footer-text" style="color: white">Community</p>
+            <p style="color: lightgray">
+              Subscribe to our newsletter and be the first to get all inside
+              information on the latest drops and special offers.
+            </p>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <hr style="border: 1px solid whitesmoke" />
+      </div>
+
+      <div class="container text-center" style="color: white">
+        © JASPO WORLDWIDE 2023
+      </div>
+    </div>
+    <!--boostrap script-->
+    <script src="/js/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!--swiper-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!--owl-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 3,
+        center: true,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+    <script>
+      var swiper = new Swiper(".mySwiper-1", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
