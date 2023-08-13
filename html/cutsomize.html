@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customize</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link href="/css/index.css" />
+    <style>
+      .box {
+        background-color: transparent;
+        text-align: center;
+        font-family: Asap, Avenir, Arial, sans-serif;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        color: transparent;
+        position: absolute;
+        border-radius: 10px;
+      }
+
+      #demo {
+        max-width: 400px;
+        height: 400px;
+        background-color: transparent;
+        border: 1px solid grey;
+        position: relative;
+        margin-top: 10px;
+      }
+
+      label {
+        font-size: 20px;
+      }
+      .setup-picture form {
+        margin-top: 20px !important;
+        width: 40%;
+        margin: auto;
+      }
+      .setup-picture form img {
+        width: 100px;
+        height: 100px;
+        display: none;
+        margin: auto;
+      }
+      .setup-picture form .picture {
+        transition: 0.3s;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        border: 3px dashed #ddd;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+      }
+      .setup-picture form .picture:hover {
+        background-color: #263238;
+        color: #aaa;
+        border: 3px solid #263238;
+      }
+      .setup-picture form .picture:hover i {
+        color: #aaa;
+      }
+      .setup-picture form .picture input {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .setup-picture form .picture h3,
+      .setup-picture form .picture i {
+        float: left;
+      }
+      .setup-picture form .picture i {
+        font-size: 2.5em;
+        margin-right: 15px;
+        color: #263238;
+      }
+      .setup-picture form .picture h3 {
+        margin-top: 10px;
+        font-weight: 100;
+      }
+      .img-1 {
+        max-width: 100%;
+        height: 2em;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .navbar.scrolled-up {
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out;
+      }
+      .owl-nav {
+        font-size: 2em;
+        text-align: center;
+      }
+      .search {
+        position: relative;
+        width: 60px;
+        height: 40px;
+        background: transparent;
+        transition: 0.5s;
+        /* box-shadow: 2px 2px 10px rgb(0, 0, 0); */
+        display: flex;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .search.active {
+        width: 360px;
+      }
+      .search .icon {
+        position: absolute;
+        color: #000000;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 40px;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .search .input {
+        position: relative;
+        width: 300px;
+        height: 40px;
+        left: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-style: none;
+        text-decoration: underline;
+        background: lightgray;
+        border-radius: 16px;
+        padding: 0.5em 0.5em 0.5em;
+      }
+      .search .input input {
+        border: 1px solid black;
+        text-align: justify;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: rgb(239, 239, 239);
+        border-radius: 16px;
+        /* outline: rgb(0, 0, 0); */
+        font-size: 18px;
+      }
+      .clear {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        right: 15px;
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .clear::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 15px;
+        background: #0a0a0a;
+        transform: rotate(45deg);
+      }
+      .clear::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 15px;
+        background: #000000;
+        transform: rotate(315deg);
+      }
+      /* .setup-picture form button {
+        font-family: "PT Sans", sans-serif;
+        border: 2px solid #3498db;
+        padding: 5px 30px 5px;
+        color: #3498db;
+        background-color: transparent;
+        font-weight: bold;
+        border-radius: 50px;
+      }
+      .setup-picture form button:hover {
+        background-color: rgba(52, 152, 219, 0.2);
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid bg-light" style="min-height: 0.5vh">
+      <div class="container-fluid mx-auto">
+        <div class="row">
+          <div
+            class="col-sm-2 mt-2 mx-auto text-center"
+            style="text-decoration: none; font-size: 1.5em; color: rgb(0, 0, 0)"
+          >
+            <a
+              href=""
+              style="text-decoration: none; font-size: 1em; color: rgb(0, 0, 0)"
+            >
+              <ion-icon
+                name="logo-instagram"
+                style="
+                  color: rgb(0, 0, 0);
+                  text-decoration: none;
+                  font-size: 1em;
+                "
+              ></ion-icon>
+            </a>
+            <a href="">
+              <ion-icon
+                name="logo-facebook"
+                style="
+                  color: rgb(0, 0, 0);
+                  text-decoration: none;
+                  font-size: 1em;
+                "
+              ></ion-icon>
+            </a>
+          </div>
+
+          <div class="col-sm-6 text-center mt-2">
+            <p
+              style="
+                font-size: 1em;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: rgb(0, 0, 0);
+              "
+            >
+              <i>JUST ADD SPORTS</i>
+            </p>
+          </div>
+
+          <div class="col-sm-3 text-center mx-auto">
+            <span
+              style="display: flex; flex-direction: row; text-align: center"
+              class="mx-auto text-center"
+            >
+              <div
+                class="container-fluid mx-auto text-center"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  justify-items: center;
+                "
+              >
+                <i
+                  class="fa-solid fa-envelope mt-2 mx-2 text-center"
+                  style="color: #000000"
+                ></i>
+
+                <a href="/html/sign.html" style="text-decoration: none">
+                  <p
+                    style="
+                      font-size: 1em;
+                      font-weight: 400;
+                      margin-top: 0.1em;
+                      color: rgb(0, 0, 0);
+                    "
+                    class="mt-2"
+                  >
+                    SIGN IN |
+                  </p>
+                </a>
+
+                <a href="#" style="text-decoration: none">
+                  <p
+                    style="
+                      font-size: 1em;
+                      font-weight: 400;
+                      margin-top: 0.1em;
+                      color: rgb(0, 0, 0);
+                    "
+                    class="mt-2"
+                  >
+                    CUSTOMIZE
+                  </p>
+                </a>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg"
+      style="background-color: white"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">
+          <img
+            src="/images/archit sir.png"
+            class="img-fuid"
+            style="width: 100%; height: 2.5em"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/html/Skateboard.html"
+                >SKATEBOARD</a
+              >
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a
+                class="nav-link dropdown-toggle"
+                href="/html/Roller.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ROLLER SKATES
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/html/Roller.html">QUAD</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/html/Roller.html">INLINE</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/html/kickscooter.html"
+                >KICK SCOOTER</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/html/safety.html"
+                >SAFETY EQUIPMENTS</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/html/cricket.html">CRICKET</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle mx-2"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OTHER
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/html/badminton.html"
+                    >BADMINTON</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/html/basketball.html"
+                    >BASKETBALL</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/html/football.html"
+                    >FOOTBALL</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="/html/fitness.html">FITNESS</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <form>
+        <div class="search" style="color: #000000">
+          <div class="icon">
+            <ion-icon
+              name="search-outline"
+              style="color: black; font-size: 1.6em"
+            ></ion-icon>
+          </div>
+          <div class="input">
+            <input type="text" placeholder="Search" id="mysearch" />
+            <span
+              class="clear"
+              onclick="document.getElementById('mysearch').value ='' "
+            >
+            </span>
+          </div>
+        </div>
+      </form>
+      <ion-icon
+        name="heart-outline"
+        class="mx-2"
+        style="color: black; font-size: 1.6em"
+        title="favourite"
+      ></ion-icon>
+      <ion-icon
+        name="bag-outline"
+        class="mx-2"
+        style="color: black; font-size: 1.6em"
+        title="checkout"
+      ></ion-icon>
+    </nav>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper text-center mx-auto">
+        <div class="swiper-slide">
+          Elevate your game with Jaspo, where passion meets performance in
+          the<br />
+          world of sports, ensuring every athlete's dream becomes a reality
+        </div>
+        <div class="swiper-slide">
+          Unleash the champion within as you gear up with Jaspo, the ultimate
+          <br />
+          sports companion that empowers you to conquer every challenge on the
+          field.
+        </div>
+        <div class="swiper-slide">
+          Experience the thrill of victory with Jaspo, the go-to brand that
+          <br />
+          epitomizes innovation, quality, and excellence in the sports industry.
+        </div>
+        <div class="swiper-slide">
+          From amateurs to pros, Jaspo remains the game-changer of the sports
+          <br />
+          industry, delivering cutting-edge equipment and fostering a community
+          of winners.
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4">
+          <img
+            src="/images/skateboard_back-removebg-preview.png"
+            class="img-fluid"
+            id="skateboard-image"
+          />
+          <input type="color" class="color-picker" id="colorPicker1" />
+          <div class="container text-center mt-3">
+            <button class="btn btn-primary save-btn">Save</button>
+          </div>
+        </div>
+
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-4" style="position: relative">
+          <div id="demo">
+            <div class="box">
+              <img
+                src="#"
+                id="uploaded"
+                style="height: 100%; max-width: 120px"
+              />
+            </div>
+            <div
+              class="resize-controls"
+              style="
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              "
+            >
+              <button class="btn btn-secondary resize-btn" data-scale="0.8">
+                -
+              </button>
+              <button class="btn btn-secondary resize-btn" data-scale="1.2">
+                +
+              </button>
+            </div>
+            <div class="setup-picture">
+              <form method="post" onsubmit="return false">
+                <img src="#" id="uploaded" />
+                <!-- Uploaded picture goes here -->
+                <div class="picture">
+                  <input type="file" name="admin_picture" accept="image/*" />
+                  <i class="fa fa-camera"></i>
+                  <p>Choose your picture</p>
+                  <div class="clearfix"></div>
+                </div>
+                <!-- <button class="btn btn-dark mt-15">Upload Picture</button> -->
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+
+    <div class="footer bg-black mt-5" style="padding: 1em 1em 1em">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 text-center" style="color: white">
+            <p class="footer-text">About</p>
+            <p>
+              At Jaspo, we are passionate about skateboarding and dedicated to
+              delivering exceptional products to riders of all ages and skill
+              levels.
+            </p>
+          </div>
+          <div class="col-sm-3 text-center" style="color: white">
+            <p class="footer-text">Quick Links</p>
+            <ul style="list-style: none">
+              <li>Home</li>
+              <li>About Us</li>
+              <li>Products</li>
+              <li>Contact us</li>
+            </ul>
+          </div>
+          <div
+            class="col-sm-3 text-center"
+            style="display: flex; flex-direction: column; color: white"
+          >
+            <p class="footer-text">Our Social</p>
+            <a href="#"
+              ><ion-icon name="logo-instagram" class="mb-2"></ion-icon
+            ></a>
+            <a href="#"
+              ><ion-icon name="logo-twitter" class="mb-2"></ion-icon
+            ></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </div>
+
+          <div class="col-sm-3 text-center">
+            <div class="container">
+              <p class="footer-text" style="color: white">Modes Of Payment</p>
+            </div>
+            <div class="container" style="display: flex; flex-direction: row">
+              <img
+                src="/images/mastercard.png"
+                class="img-1"
+                alt="mastercard"
+              />
+              <img src="/images/gpay.png" class="img-1" alt="gpay" />
+              <img src="/images/paypal.png" class="img-1" alt="paypal" />
+
+              <img src="/images/paytm.png" class="img-1" alt="paytm" />
+              <img src="/images/upi.png" class="img-1" alt="upi" />
+
+              <img src="/images/visa.png" class="img-1" alt="visa" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr style="border: 1px solid whitesmoke" />
+      </div>
+
+      <div class="container text-center mx-auto">
+        <div class="row justify-content-between">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-2">
+            <img
+              src="/images/4502000 (1).png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2">
+            <img
+              src="/images/4502000-2.png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2">
+            <img
+              src="/images/4502000.png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2">
+            <img
+              src="/images/45020003.png"
+              class="img-fluid"
+              style="max-width: 100%"
+            />
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr style="border: 1px solid whitesmoke" />
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p style="color: white">Contact Us Through:</p>
+            <span style="display: flex; flex-direction: row">
+              <ion-icon name="mail-outline" class="mx-2"></ion-icon>
+              <p style="color: lightgray">randommail@gmail.com</p>
+            </span>
+            <span style="display: flex; flex-direction: row">
+              <ion-icon name="logo-facebook" class="mx-2"></ion-icon>
+              <p style="color: lightgray">facebook page name</p>
+            </span>
+            <span style="display: flex; flex-direction: row">
+              <ion-icon name="logo-instagram" class="mx-2"></ion-icon>
+              <p style="color: lightgray">insta page book</p>
+            </span>
+          </div>
+          <div class="col-sm-6">
+            <p class="footer-text" style="color: white">Community</p>
+            <p style="color: lightgray">
+              Subscribe to our newsletter and be the first to get all inside
+              information on the latest drops and special offers.
+            </p>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <hr style="border: 1px solid whitesmoke" />
+      </div>
+
+      <div class="container text-center" style="color: white">
+        © JASPO WORLDWIDE 2023
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Draggable.create(".box", {
+        //bounds:"#demo",
+        //allowNativeTouchScrolling:false,
+        onDrag: function () {
+          if (!this.hitTest(document.documentElement, "100%")) {
+            console.log("hit the edge!");
+          }
+        },
+      });
+
+      console.log(Draggable.version);
+    </script>
+    <script>
+      $(function () {
+        var picture;
+
+        // Viewing Uploaded Picture On Setup Admin Profile
+        function livePreviewPicture(picture) {
+          if (picture.files && picture.files[0]) {
+            var fileSize = picture.files[0].size; // Get file size in bytes
+            var maxFileSize = 2 * 1024 * 1024; // 2MB in bytes
+
+            if (fileSize <= maxFileSize) {
+              var picture_reader = new FileReader();
+              picture_reader.onload = function (event) {
+                $("#uploaded").attr("src", event.target.result);
+              };
+              picture_reader.readAsDataURL(picture.files[0]);
+            } else {
+              alert("Image size exceeds the limit of 2MB.");
+              $("#uploaded").attr("src", ""); // Clear the image preview
+              picture.value = ""; // Clear the file input
+            }
+          }
+        }
+
+        $(".setup-picture form .picture input").on("change", function () {
+          $("#uploaded").fadeIn();
+          livePreviewPicture(this);
+        });
+      });
+      $(".save-btn").on("click", function () {
+        var parentColumn = $(this).closest(".col-sm-4");
+        var image = parentColumn.find("img").attr("src");
+        // Implement your logic to save the image customization here
+        // You can send the image URL to the server or perform other actions
+        console.log("Image saved:", image);
+      });
+    </script>
+    <!--boostrap script-->
+    <script src="/js/index.js"></script>
+
+    <script>
+      // Custom JavaScript for scroll up behavior
+      let prevScrollPos = window.pageYOffset;
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", function () {
+        const currentScrollPos = window.pageYOffset;
+        if (prevScrollPos > currentScrollPos) {
+          // Scrolling up
+          navbar.classList.remove("scrolled-up");
+        } else {
+          // Scrolling down
+          navbar.classList.add("scrolled-up");
+        }
+        prevScrollPos = currentScrollPos;
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!--swiper-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!--owl-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+    <script>
+      // ... (previous JavaScript code) ...
+
+      // Resize button functionality
+      $(".resize-btn").on("click", function () {
+        var scale = parseFloat($(this).data("scale"));
+        var uploadedImage = $("#uploaded");
+
+        var currentWidth = uploadedImage.width();
+        var currentHeight = uploadedImage.height();
+
+        var newWidth = currentWidth * scale;
+        var newHeight = currentHeight * scale;
+
+        // Set new dimensions
+        uploadedImage.css({
+          width: newWidth + "px",
+          height: newHeight + "px",
+        });
+
+        // Implement your logic to update the resized image on the server or perform other actions
+        console.log("Image resized:", newWidth, newHeight);
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".color-picker").on("input", function () {
+          var $colorPicker = $(this);
+          var $parentColumn = $colorPicker.closest(".col-sm-4");
+          var $image = $parentColumn.find("img");
+          var color = $colorPicker.val();
+
+          var hsl = hexToHSL(color);
+          applyHueRotationAndBrightness($image, hsl.h, hsl.l);
+
+          var colorName = getColorName(color);
+          console.log("Color Name:", colorName);
+        });
+
+        function hexToHSL(hex) {
+          var r = parseInt(hex.slice(1, 3), 16);
+          var g = parseInt(hex.slice(3, 5), 16);
+          var b = parseInt(hex.slice(5, 7), 16);
+          return rgbToHSL(r, g, b);
+        }
+
+        function rgbToHSL(r, g, b) {
+          r /= 255;
+          g /= 255;
+          b /= 255;
+          var max = Math.max(r, g, b);
+          var min = Math.min(r, g, b);
+          var h,
+            s,
+            l = (max + min) / 2;
+
+          if (max === min) {
+            h = s = 0; // achromatic
+          } else {
+            var d = max - min;
+            s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+            switch (max) {
+              case r:
+                h = (g - b) / d + (g < b ? 6 : 0);
+                break;
+              case g:
+                h = (b - r) / d + 2;
+                break;
+              case b:
+                h = (r - g) / d + 4;
+                break;
+            }
+            h /= 6;
+          }
+
+          return { h: h * 360, s: s, l: l };
+        }
+
+        function applyHueRotationAndBrightness($element, degrees, lightness) {
+          var brightness = calculateBrightness(lightness);
+          var hueRotateValue =
+            "hue-rotate(" + degrees + "deg) brightness(" + brightness + ")";
+          $element.css("filter", hueRotateValue);
+        }
+
+        function calculateBrightness(lightness) {
+          // Adjust brightness based on lightness (0 to 1)
+          return lightness > 0.5 ? 1 - (lightness - 0.5) : lightness + 0.3;
+        }
+
+        $(".save-btn").on("click", function () {
+          var $parentColumn = $(this).closest(".col-sm-4");
+          var imageSrc = $parentColumn.find("img").attr("src");
+          console.log("Image saved:", imageSrc);
+        });
+      });
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
