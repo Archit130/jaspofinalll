@@ -25,6 +25,28 @@
     />
     <link href="/css/index.css" />
     <style>
+      #skateboard-container {
+        position: relative;
+        /* width: 300px;
+        height: 300px; */
+      }
+      #skateboard-image {
+        max-width: 100%;
+        height: auto;
+      }
+      #textDisplay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        padding: 10px;
+        background-color: transparent;
+        border-radius: 5px;
+        user-select: none;
+        cursor: grab;
+      }
+
       .box {
         background-color: transparent;
         text-align: center;
@@ -215,17 +237,17 @@
         transform: rotate(315deg);
       }
       /* .setup-picture form button {
-        font-family: "PT Sans", sans-serif;
-        border: 2px solid #3498db;
-        padding: 5px 30px 5px;
-        color: #3498db;
-        background-color: transparent;
-        font-weight: bold;
-        border-radius: 50px;
-      }
-      .setup-picture form button:hover {
-        background-color: rgba(52, 152, 219, 0.2);
-      } */
+            font-family: "PT Sans", sans-serif;
+            border: 2px solid #3498db;
+            padding: 5px 30px 5px;
+            color: #3498db;
+            background-color: transparent;
+            font-weight: bold;
+            border-radius: 50px;
+          }
+          .setup-picture form button:hover {
+            background-color: rgba(52, 152, 219, 0.2);
+          } */
     </style>
   </head>
   <body>
@@ -493,21 +515,32 @@
       <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-4">
-          <img
-            src="/images/skateboard_back-removebg-preview.png"
-            class="img-fluid"
-            id="skateboard-image"
-          />
+          <div id="skateboard-container">
+            <img
+              src="/images/skateboard_back-removebg-preview.png"
+              class="img-fluid"
+              id="skateboard-image"
+            />
+            <!-- <input
+              type="text"
+              id="textInput"
+              placeholder="Type your text here"
+              oninput="updateTextDisplay()"
+            /> -->
+            <div id="textDisplay"></div>
+          </div>
           <input type="color" class="color-picker" id="colorPicker1" />
           <div class="container text-center mt-3">
-            <button class="btn btn-primary save-btn">Save</button>
+            <!-- <button class="btn btn-primary save-btn">Save</button> -->
           </div>
         </div>
 
         <div class="col-sm-2"></div>
 
-        <div class="col-sm-4" style="position: relative">
+        <div class="col-sm-4 text-center mx-auto" style="position: relative">
           <div id="demo">
+            <h5>Upload Custom Image (Draggable)</h5>
+
             <div class="box">
               <img
                 src="#"
@@ -531,19 +564,45 @@
                 +
               </button>
             </div>
-            <div class="setup-picture">
+            <div class="setup-picture mb-4">
               <form method="post" onsubmit="return false">
                 <img src="#" id="uploaded" />
                 <!-- Uploaded picture goes here -->
                 <div class="picture">
                   <input type="file" name="admin_picture" accept="image/*" />
-                  <i class="fa fa-camera"></i>
+                  <!-- <ion-icon name="camera-outline"></ion-icon> -->
                   <p>Choose your picture</p>
                   <div class="clearfix"></div>
                 </div>
                 <!-- <button class="btn btn-dark mt-15">Upload Picture</button> -->
               </form>
             </div>
+
+            <div
+              class="container"
+              style="
+                position: absolute;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              "
+            >
+              <hr />
+
+              <h5 class="mb-4">CUSTOM TEXT</h5>
+            </div>
+            <input
+              style="
+                position: absolute;
+                top: 85%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              "
+              type="text"
+              id="textInput"
+              placeholder="Type your text here"
+              oninput="updateTextDisplay()"
+            />
           </div>
         </div>
         <div class="col-sm-1"></div>
@@ -822,12 +881,30 @@
       });
     </script>
     <script>
+      // Draggable textDisplay using GSAP Draggable Plugin
+      const textDisplay = document.getElementById("textDisplay");
+      const textInput = document.getElementById("textInput");
+
+      Draggable.create(textDisplay, {
+        type: "x,y",
+        edgeResistance: 0.65,
+        throwProps: true,
+      });
+
+      // Update textDisplay based on input value
+      function updateTextDisplay() {
+        textDisplay.textContent = textInput.value;
+      }
+    </script>
+    <script>
       $(document).ready(function () {
         $(".color-picker").on("input", function () {
           var $colorPicker = $(this);
           var $parentColumn = $colorPicker.closest(".col-sm-4");
           var $image = $parentColumn.find("img");
           var color = $colorPicker.val();
+
+          console.log("Current Color:", color); // Log the color
 
           var hsl = hexToHSL(color);
           applyHueRotationAndBrightness($image, hsl.h, hsl.l);
