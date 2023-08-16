@@ -416,7 +416,7 @@
                 >SKATEBOARD</a
               >
             </li>
-            <li class="nav-item dropdown mx-2">
+            <li class="nav-item dropdown mx-2" style="z-index: 1000">
               <a
                 class="nav-link dropdown-toggle"
                 href="/html/Roller.html"
@@ -452,7 +452,7 @@
             <li class="nav-item">
               <a class="nav-link mx-2" href="/html/cricket.html">CRICKET</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" style="z-index: 1000">
               <a
                 class="nav-link dropdown-toggle mx-2"
                 href="#"
@@ -462,7 +462,7 @@
               >
                 OTHER
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" style="z-index: 1000000">
                 <li>
                   <a class="dropdown-item" href="/html/badminton.html"
                     >BADMINTON</a
@@ -551,6 +551,125 @@
       </div>
     </div>
 
+    <nav
+      class="navbar navbar-expand-lg sticky-top bg-light"
+      style="
+        background-color: white;
+        box-shadow: 2px 2px 2px rgb(208, 208, 208);
+        padding: 1em 1em 1em;
+      "
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CUSTOMIZE</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                style="font-weight: 500; font-size: 15px"
+                >SKATEBOARD</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                style="font-weight: 500; font-size: 15px"
+                >HELMET</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                style="font-weight: 500; font-size: 15px"
+                >CRICKET BALL</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                style="font-weight: 500; font-size: 15px"
+                >WICKETS</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                style="font-weight: 500; font-size: 15px"
+                >BAT</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                style="font-weight: 500; font-size: 15px"
+                >FOOTBALL</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                style="font-weight: 500; font-size: 15px"
+                >BASKETBALL</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                style="font-weight: 500; font-size: 15px"
+                >ROLLER SKATES</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                style="font-weight: 500; font-size: 15px"
+                >BADMINTON</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                style="font-weight: 500; font-size: 15px"
+                >SKATEBOARD COMBOS</a
+              >
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="container mt-5">
       <div class="row">
         <div class="col-sm-1"></div>
@@ -592,7 +711,7 @@
               class="resize-controls"
               style="
                 position: absolute;
-                top: 45%;
+                top: 35%;
                 left: 50%;
                 transform: translate(-50%, -50%);
               "
@@ -603,6 +722,7 @@
               <button class="btn btn-secondary resize-btn" data-scale="1.2">
                 +
               </button>
+              <p>resize the image</p>
             </div>
             <div class="setup-picture mb-4">
               <form method="post" onsubmit="return false">
