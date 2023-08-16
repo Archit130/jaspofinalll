@@ -5,9 +5,11 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
+    font-size: 16px;
+    font-weight: 500;
 }
 p{
-    font-size: 14px;
+    font-size: 16px;
 }
 /* Set dropdown-menu to display none by default */
 .dropdown-menu {
@@ -44,7 +46,10 @@ p{
   .nav-item .nav-link{
     text-decoration: none; /* Remove the default underline */
   position: relative;    /* Needed to position the pseudo-element */
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #111;
   }
   .nav-item .nav-link:hover{
     text-decoration: none; 
