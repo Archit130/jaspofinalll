@@ -11,6 +11,11 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/images/jaspo_logo-removebg-preview-2.png"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
     <script
@@ -235,6 +240,31 @@
         height: 15px;
         background: #000000;
         transform: rotate(315deg);
+      }
+      .nav-item .nav-link {
+        text-decoration: none; /* Remove the default underline */
+        position: relative; /* Needed to position the pseudo-element */
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #111;
+      }
+      .nav-item .nav-link:hover {
+        text-decoration: none;
+      }
+      .nav-item .nav-link::after {
+        content: ""; /* Required for pseudo-elements */
+        position: absolute; /* Position the underline absolutely */
+        left: 0; /* Start the underline from the left */
+        bottom: -2px; /* Adjust the distance from the text */
+        width: 100%; /* Set the width of the underline */
+        height: 2px; /* Set the thickness of the underline */
+        background-color: #000; /* Choose your desired underline color */
+        opacity: 0; /* Make the underline invisible by default */
+        transition: opacity 0.3s ease;
+      }
+      .nav-item .nav-link:hover::after {
+        opacity: 1;
       }
       /* .setup-picture form button {
             font-family: "PT Sans", sans-serif;
@@ -488,32 +518,36 @@
       ></ion-icon>
     </nav>
 
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper text-center mx-auto">
-        <div class="swiper-slide">
-          Elevate your game with Jaspo, where passion meets performance in
-          the<br />
-          world of sports, ensuring every athlete's dream becomes a reality
-        </div>
-        <div class="swiper-slide">
-          Unleash the champion within as you gear up with Jaspo, the ultimate
-          <br />
-          sports companion that empowers you to conquer every challenge on the
-          field.
-        </div>
-        <div class="swiper-slide">
-          Experience the thrill of victory with Jaspo, the go-to brand that
-          <br />
-          epitomizes innovation, quality, and excellence in the sports industry.
-        </div>
-        <div class="swiper-slide">
-          From amateurs to pros, Jaspo remains the game-changer of the sports
-          <br />
-          industry, delivering cutting-edge equipment and fostering a community
-          of winners.
+    <div class="container-fluid bg-light">
+      <div class="swiper mySwipe">
+        <div class="swiper-wrapper text-center mx-auto">
+          <div class="swiper-slide">
+            Elevate your game with Jaspo, where passion meets performance in
+            the<br />
+            world of sports, ensuring every athlete's dream becomes a reality
+          </div>
+          <div class="swiper-slide">
+            Unleash the champion within as you gear up with Jaspo, the ultimate
+            <br />
+            sports companion that empowers you to conquer every challenge on the
+            field.
+          </div>
+          <div class="swiper-slide">
+            Experience the thrill of victory with Jaspo, the go-to brand that
+            <br />
+            epitomizes innovation, quality, and excellence in the sports
+            industry.
+          </div>
+          <div class="swiper-slide">
+            From amateurs to pros, Jaspo remains the game-changer of the sports
+            <br />
+            industry, delivering cutting-edge equipment and fostering a
+            community of winners.
+          </div>
         </div>
       </div>
     </div>
+
     <div class="container mt-5">
       <div class="row">
         <div class="col-sm-1"></div>
