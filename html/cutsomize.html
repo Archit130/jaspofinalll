@@ -61,7 +61,7 @@
         line-height: 100px;
         color: transparent;
         position: absolute;
-        top: 90%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 10px;
@@ -676,9 +676,10 @@
         <div class="col-sm-4">
           <div id="skateboard-container">
             <img
-              src="/images/skateboard_back-removebg-preview.png"
+              id="image"
+              src="/images/default.jpeg"
+              alt="Image"
               class="img-fluid"
-              id="skateboard-image"
             />
             <!-- <input
               type="text"
@@ -695,10 +696,6 @@
             </div>
             <div id="textDisplay"></div>
           </div>
-          <input type="color" class="color-picker" id="colorPicker1" />
-          <div class="container text-center mt-3">
-            <!-- <button class="btn btn-primary save-btn">Save</button> -->
-          </div>
         </div>
 
         <div class="col-sm-2"></div>
@@ -711,7 +708,7 @@
               class="resize-controls"
               style="
                 position: absolute;
-                top: 35%;
+                top: 40%;
                 left: 50%;
                 transform: translate(-50%, -50%);
               "
@@ -764,10 +761,25 @@
               oninput="updateTextDisplay()"
             />
           </div>
+          <h4>Click a Color Button or Upload an Image</h4>
+          <button id="black">Black</button>
+          <button id="cyan">Cyan</button>
+          <button id="green">Green</button>
+          <button id="blue">Blue</button>
+          <button id="parrot">Parrot</button>
+          <button id="pink">Pink</button>
+          <button id="red">Red</button>
+          <button id="wheat">Wheat</button>
+          <button id="white">White</button>
         </div>
+
         <div class="col-sm-1"></div>
       </div>
     </div>
+
+    <!-- <div id="imageContainer">
+      <img id="image" src="/images/default.jpeg" alt="Image" />
+    </div> -->
 
     <div class="footer bg-black mt-5" style="padding: 1em 1em 1em">
       <div class="container">
@@ -1133,6 +1145,80 @@
       });
     </script>
 
+    <script>
+      // Function to change the displayed image based on the button clicked
+      function changeImage(color) {
+        const imageElement = document.getElementById("image");
+        switch (color) {
+          case "black":
+            imageElement.src = "/images/black-removebg-preview.png";
+            break;
+          case "cyan":
+            imageElement.src = "/images/blue-removebg-preview.png";
+            break;
+          case "green":
+            imageElement.src = "/images/green-removebg-preview.png";
+            break;
+          case "blue":
+            imageElement.src = "/images/lightblue-removebg-preview.png";
+            break;
+          case "parrot":
+            imageElement.src = "/images/yellow-removebg-preview.png";
+            break;
+          case "pink":
+            imageElement.src = "/images/pink-removebg-preview.png";
+            break;
+          case "red":
+            imageElement.src = "/images/red-removebg-preview.png";
+            break;
+          case "wheat":
+            imageElement.src = "/images/smokewhite-removebg-preview.png";
+            break;
+          case "white":
+            imageElement.src = "/images/white-removebg-preview.png";
+            break;
+          default:
+            imageElement.src = "/images/default.jpeg";
+        }
+      }
+
+      // Add click event listeners to the color buttons
+      document.getElementById("black").addEventListener("click", function () {
+        changeImage("black");
+      });
+
+      document.getElementById("cyan").addEventListener("click", function () {
+        changeImage("cyan");
+      });
+
+      document.getElementById("green").addEventListener("click", function () {
+        changeImage("green");
+      });
+
+      document.getElementById("parrot").addEventListener("click", function () {
+        changeImage("parrot");
+      });
+
+      document.getElementById("pink").addEventListener("click", function () {
+        changeImage("pink");
+      });
+
+      document.getElementById("red").addEventListener("click", function () {
+        changeImage("red");
+      });
+
+      document.getElementById("blue").addEventListener("click", function () {
+        changeImage("blue");
+      });
+
+      document.getElementById("wheat").addEventListener("click", function () {
+        changeImage("wheat");
+      });
+
+      document.getElementById("white").addEventListener("click", function () {
+        changeImage("white");
+      });
+    </script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
