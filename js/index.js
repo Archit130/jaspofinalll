@@ -18,8 +18,11 @@ function toggleNavigation() {
   this.nextElementSibling.classList.toggle("active");
 }
 
+
 productImages.forEach((image) => image.addEventListener("click", changeImage));
 navItem.addEventListener("click", toggleNavigation);
+
+
 
 function zoomIn(event) {
   var xImg = document.getElementById("imgZoom");
